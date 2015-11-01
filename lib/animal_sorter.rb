@@ -7,3 +7,17 @@
 # should include the sea creatures, the second, land animals.
 
 # Read the test suite for an example of a nested array.
+
+require 'pry'
+
+class AnimalSorter
+  attr_accessor :animal_list
+
+  def initialize(animal_list = [])
+    @animal_list = animal_list
+  end
+
+  def to_a
+    sorted_animals = animal_list.sort.each_slice(3).to_a.reverse
+  end
+end

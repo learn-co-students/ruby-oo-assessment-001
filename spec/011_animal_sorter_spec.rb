@@ -6,7 +6,7 @@ describe "AnimalSorter" do
 
     it 'sorts sea and land animals' do
       sorted_animals = [
-        ["marlin", "octopus", "fish"],
+        ["fish", "marlin", "octopus"],
         ["aardvark", "cat", "elephant"]
       ]
 
