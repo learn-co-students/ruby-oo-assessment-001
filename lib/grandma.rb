@@ -8,3 +8,10 @@
 # and yells back
 
 # NO, NOT SINCE 1938!
+
+class Grandma
+
+  def speak_to(string)
+    string.upcase == string ? "NO, NOT SINCE 1938!" : "HUH?!  SPEAK UP, SONNY!"
+  end
+end

@@ -3,6 +3,8 @@
 
 class String
   def count_sentences
-    # code goes here
+    array = []
+    array = self.split(/[\.!?]/)
+    return array.count
   end
 end
