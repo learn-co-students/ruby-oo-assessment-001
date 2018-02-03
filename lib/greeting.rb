@@ -11,3 +11,34 @@
 # afternoon: 12 - 19: Good Afternoon!
 # night: 20 - 05: Good night
 
+class Greeting
+  attr_accessor :time
+  def initialize(time)
+    @time = time
+  end
+
+  def say
+    if morning?
+      "Good Morning!"
+    elsif afternoon?
+      "Good Afternoon!"
+    elsif night?
+      "Good Night!"
+    else
+      ""
+    end
+  end
+
+  def morning?
+    @time <= 11 && @time >= 6
+  end
+
+  def afternoon?
+    @time >= 12 && @time <= 19
+  end
+
+  def night?
+    (@time >= 20 && @time <= 24) || (@time >= 0 && @time <=5)
+  end
+end
+      
