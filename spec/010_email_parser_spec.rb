@@ -1,5 +1,6 @@
 require_relative '../lib/email_parser.rb' # Code your solution in this file
 
+require 'pry'
 describe "EmailParser" do
   describe '#parser' do
     it "parses CSV emails" do

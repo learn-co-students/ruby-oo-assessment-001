@@ -1,4 +1,16 @@
-# Define a class Meal with an attribute choice.
+require 'pry'
+class Meal
 
-# Meal should accept an optional initialization argument that specifies
-# the meal choice. The default value for that argument should be meat.
+  def initialize(type = nil)
+    @type = type
+  end
+
+  def choice
+    if @type == nil
+      @type = "meat"
+    else
+      @type
+    end
+  end
+
+end

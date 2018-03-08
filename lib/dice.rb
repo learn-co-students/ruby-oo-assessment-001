@@ -1,4 +1,9 @@
-# Create a class dice with a single method `roll` that returns a random number
-# between 1 and 6
+class Dice
 
-# Feel free to google "how to generate a random number in ruby"
+  def initialize
+  end
+
+  def roll
+    rand(1...7)
+  end
+end
