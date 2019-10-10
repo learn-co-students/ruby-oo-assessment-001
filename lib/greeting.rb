@@ -10,4 +10,35 @@
 # morning: 06 - 11: Good Morning!
 # afternoon: 12 - 19: Good Afternoon!
 # night: 20 - 05: Good night
+require 'pry'
+class Greeting
+
+  def initialize(mil_time)
+    @time = mil_time
+  end
+
+  def say
+     puts "time = #{@time}"
+    if self.morning?
+      "Good Morning!"
+    elsif self.afternoon?
+      "Good Afternoon!"
+    else self.night?
+      "Good Night!"
+    end
+  end
+
+  def morning?
+     @time >= 6 && @time <= 11
+  end
+
+  def afternoon?
+     @time >= 12 && @time <= 19
+  end
+
+  def night?
+     @time >= 20 || @time <= 5
+  end
+
+end
 

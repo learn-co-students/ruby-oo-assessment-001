@@ -3,11 +3,15 @@
 # a max and min value that are given as arguments
 
 class Integer
-  def is_between?
+  def is_between?(num1, num2)
     # `self` refers to the number that this method was called on.
     # In `8.is_between?(4,10)`, `self` would be equal to `8`.
     # To make things easier, assume the variable `the_number`
     # is the number you are testing.
-    the_number = self 
+    if num1 > num2
+      temp = num1; num1 = num2; num2 = temp
+    end
+    the_number = self
+    the_number >= num1 && the_number <= num2
   end
 end
