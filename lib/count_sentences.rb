@@ -4,5 +4,6 @@
 class String
   def count_sentences
     # code goes here
+    self.split('.').count
   end
 end
